@@ -61,8 +61,14 @@
       let resetButton;
 
       function checkGuess() {
-        alert("I am a placeholder!");
+        const userGuess = Number(guessField.value);
+        if(guessCount === 1) {
+          guesses.textContent = "Previous Guesses: ";
+        }
+        guesses.textContent = `${guesses.textContent} ${userGuess}`;
+        // initial part of checking for guess
       }
+
 
     </script>
   </body>
