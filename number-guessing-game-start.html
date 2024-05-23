@@ -67,6 +67,32 @@
         }
         guesses.textContent = `${guesses.textContent} ${userGuess}`;
         // initial part of checking for guess
+
+        //check if user guess is equal to random number
+        if (userGuess === randomNumber) {
+          //Game won message
+          lastResult.textContent = "Congratulations!  You got it right!";
+          lastResult.style.backgroundColor = 'green';
+          lowOrHi.textContent = "";
+          setGameOver();
+        } else if (guessCount === 10) {
+          //Game Over Message
+          lastResult.textContent = "!!!GAME OVER!!!";
+          lowOrHi.textContent = "";
+          setGameOver();
+        } else {
+          //Try again Message
+          lastResult.textContent = "Wrong!";
+          lastResult.style.backgroundColor = 'red';
+          if (userGuess < randomNumber) {
+            lowOrHi.textContent = "Last guess was too low!";
+          } else if (userGuess > randomNumber) {
+            lowOrHi.textContent = "Last guess was too high!";
+          }
+        }
+        guessCount++;
+        guessField.value = "";
+        guessField.focus();
       }
 
 
