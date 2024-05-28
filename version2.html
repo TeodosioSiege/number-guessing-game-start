@@ -47,6 +47,33 @@
       <script>
 //initialize all needed variables
     //generate random number and store in a variable
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    // store  DOM API of children of resultParas in individual variables 
+    const guesses = document.querySelector(".guesses");
+    const lastResult = document.querySelector('.lastResult');
+    const lowOrHi = document.querySelector('.lowOrHi');
+
+    const guessSubmit = document.querySelector('.guessSubmit');
+    const guessField = document.querySelector('.guessField');
+
+    // initialize modifiable variables of guess count and reset button
+    let guessCount = 1;
+    let resetButton;
+//create checkGuess function
+function checkGuess(){
+  alert('check guess');
+}
+// add event listener to submit, then call checkGuess
+guessSubmit.addEventListener("click", checkGuess);
+// create function to game over, including event listener to reset game
+// create function to reset game
+
+
+
+
+
+//initialize all needed variables
+    //generate random number and store in a variable
     // store  DOM API of children of resultParas in individual variables
     // initialize modifiable variables of guess count and reset button
 //create checkGuess function
