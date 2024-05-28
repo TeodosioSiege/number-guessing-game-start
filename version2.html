@@ -63,9 +63,13 @@
 function checkGuess(){
   //initialize user guess
   const userGuess = Number(guessField.value);
-  alert(userGuess);
+  // alert(userGuess);
 
   //if first attempt, initialize guesses content, then apppend user guess 
+  if (guessCount === 1) {
+    guesses.textContent = "Previous Guesses: ";
+  }
+  guesses.textContent = `${guesses.textContent} ${userGuess}`;
 }
 // add event listener to submit, then call checkGuess
 guessSubmit.addEventListener("click", checkGuess);
