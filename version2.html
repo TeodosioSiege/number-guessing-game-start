@@ -61,7 +61,11 @@
     let resetButton;
 //create checkGuess function
 function checkGuess(){
-  alert('check guess');
+  //initialize user guess
+  const userGuess = Number(guessField.value);
+  alert(userGuess);
+
+  //if first attempt, initialize guesses content, then apppend user guess 
 }
 // add event listener to submit, then call checkGuess
 guessSubmit.addEventListener("click", checkGuess);
